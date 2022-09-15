@@ -14,7 +14,7 @@
   tasks:
     - name: deploy greeting
       copy:
-        dest: "/home/example_playbook"
+        dest: "/var/www/html"
         content: "{{ greeting }}"
 
 ...
