@@ -11,7 +11,7 @@
       path: "/home/example_playbook"
       state: directory
 
-  tasks:
+   tasks:
     - name: deploy greeting
       copy:
         dest: "/home/example_playbook"
