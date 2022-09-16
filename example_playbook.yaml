@@ -3,19 +3,11 @@
   hosts: client2
   become: yes
 
-  vars:
-   greeting: Hello world!
   tasks:
-    - name: creating a new directory
-      file:
-      path: "/home/example_playbook"
-      state: directory
-
-  tasks:
-    - name: deploy greeting
-      copy:
-        dest: "/var/www/html"
-        content: "{{ greeting }}"
+   - name: Deploy static website
+     copy:
+      src: /var/lib/jenkins/workspace/Project2
+      dest: /var/www/html/
 
 ...
 
